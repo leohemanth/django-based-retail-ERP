@@ -79,5 +79,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.sites',
+    'django.contrib.localflavor',
     'erp.product',
+    'erp.person',
+    'erp.pos'
 )
