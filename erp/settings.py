@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('h', 'h@h.com'),
 )
 
 MANAGERS = ADMINS
@@ -80,7 +80,12 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.sites',
     'django.contrib.localflavor',
-    'erp.product',
-    'erp.person',
-    'erp.pos'
+    'erp.purchase',
+    'erp.tagging',
+	'erp.product',
+    'erp.company',
+    'erp.customer',
+    'erp.sale',
+    
 )
+

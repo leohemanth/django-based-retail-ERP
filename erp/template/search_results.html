@@ -2,13 +2,14 @@
 
 {% if products %}
     <p>Found {{ products|length }} product{{ products|pluralize }}.</p>
-    <ol>
+    <p><ol>
         {% for p in products %}
-        <li>{{ p.name }}</li>
-        <ul>{{ p.group }}</ul>
-
-			{% endfor %}
-    </ol>
+        <li>{{p.id }}
+            {% for g in p.group.all %}
+            {{ g.id }},</li>
+            {% endfor %}
+        {% endfor %}
+    </ol></p>
 {% else %}
     <p>No books matched your search criteria.</p>
 {% endif %}

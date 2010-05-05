@@ -1,9 +1,17 @@
 from django.contrib import admin
-from erp.product.models import product, group
+from product.models import *
 
-class productadmin(admin.ModelAdmin):
-    list_display = ('name', 'desc')
-    search_fields = ('name', 'desc')
-    filter_horizontal = ('group',)
-admin.site.register(product,productadmin)
-admin.site.register(group)
+
+class Categoryadmin(admin.ModelAdmin):
+    list_display = ('name','description')
+    search_fields = ['name','description']
+
+
+
+class Productadmin(admin.ModelAdmin):
+    list_display = ('name','description','shortcut','category','image')
+    list_filter = ('name','description','shortcut','category')
+    search_fields = ['name','description','shortcut']
+
+admin.site.register(Product,Productadmin)
+admin.site.register(Category,Categoryadmin)
